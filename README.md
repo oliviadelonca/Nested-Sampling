@@ -28,16 +28,16 @@ Closed-form derivations for the Gaussian model $y_i \sim \mathcal{N}_d(\theta, \
 - **1d** — Rewriting of the constraint $L(\theta) > l$ as a ball condition
 
 ### Part 2 — Exact Constrained Sampling ($\bar{y} = 0$, $\Sigma = I_d$)
-In this special case, the constraint $L(\theta) > l$ reduces to $\theta \in B_d(0, r_l)$, allowing **exact sampling** from the truncated prior using:
+In this special case, the constraint $L(\theta) > l$ reduces to $\theta \in B_d(0, r_l)$, allowing exact sampling from the truncated prior using:
 - Random direction sampling (uniform on the sphere)
 - Inverse CDF sampling of the radius from a truncated $\chi^2$ distribution
 
 Performance is evaluated across dimensions $d \in \{1, 2, 3, 5\}$ with $n=30$ observations and $N=200$ particles.
 
 ### Part 3 — MCMC Constrained Sampling (known $\Sigma$, arbitrary $\bar{y}$)
-When exact sampling is no longer possible, a **Metropolis-Hastings MCMC** kernel replaces the exact sampler. The effect of the number of MCMC steps $M$ on bias and RMSE is studied, reproducing the finding from Chopin & Robert that $M=3$ Gibbs steps is generally sufficient.
+When exact sampling is no longer possible, a Metropolis-Hastings MCMC kernel replaces the exact sampler. 
 
 ### Part 4 — Unknown $\Sigma$ with NIW Prior
-Extension to the case where $\Sigma$ is unknown, using a **Normal-Inverse-Wishart (NIW)** conjugate prior. The MCMC kernel jointly updates $\theta$ and $\Sigma$ via:
+Extension to the case where $\Sigma$ is unknown, using a Normal-Inverse-Wishart (NIW) conjugate prior. The MCMC kernel jointly updates $\theta$ and $\Sigma$ via:
 - Random walk proposals on $\theta$
 - Cholesky-based proposals on $\Sigma$
