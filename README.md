@@ -1,6 +1,6 @@
 # Nested Sampling — Marginal Likelihood Estimation
 
-In this notebook, I implement and study the Nested Sampling algorithm (Skilling, 2006) for approximating the marginal likelihood (Bayesian evidence). I base myself on the theoretical analysis of Chopin & Robert (2009).
+This notebook implements and studies the Nested Sampling algorithm (Skilling, 2006) for approximating the marginal likelihood (Bayesian evidence). It is based on the theoretical analysis of Chopin & Robert (2009).
 
 > Reference article: [Chopin & Robert (2009), arXiv:0801.3887](https://arxiv.org/pdf/0801.3887)
 
